@@ -1,0 +1,1 @@
+Downlaod the Script_reader.zip file and extract it in C:\Windows
