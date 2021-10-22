@@ -45,54 +45,53 @@ if __name__ == '__main__':
 
 while run:
     ##
-    pof = ["1", "2"]
-    act = 0
-    k = 0
+    runLoop = 0
+    choiceValidation = 0
     ##
     time.sleep(1)
-    if act != 1:
+    if runLoop != 1:
         if EldrolodDLCActive == False:
-            while k <1:
+            while choiceValidation <1:
                 ok = pyautogui.prompt(text="During the story, there will be options e.g.'what is your gender? [1]Female [2]Male' you will answer these using the numbers that match your answer. Do you understand? [1]Yes [2]Of course", title='Hijlmarch I: The Queen Of Validor' , default='')
-                act = 0
+                runLoop = 0
                 if ok == "1" or ok == "2":
-                    k = 1
+                    choiceValidation = 1
                 if ok < "1" or ok > "2":
                     print("Invalid responce")
-                    k = 0
+                    choiceValidation = 0
     time.sleep(1)
 
-    if act != 1:
+    if runLoop != 1:
         if EldrolodDLCActive == False:
-            k = 0
-            while k < 1:
+            choiceValidation = 0
+            while choiceValidation < 1:
                 choice_0 = pyautogui.prompt(text="'It's dark in this room and i don't like it. My father, King Val, won't let me take his place when he dies just because I'm a woman, I'll show him what a woman can do when i run away. Now, how do I escape this room before his servant comes to collect me?' [1]Escape from the window [2]Run out the door", title='Hijlmarch I: The Queen Of Validor' , default='')
-                act = 0
+                runLoop = 0
                 if choice_0 == "1" or choice_0 == "2":
-                    k = 1
+                    choiceValidation = 1
                 if choice_0 <"1" or choice_0 > "3":
                     print("Invalid responce")
-                    k = 0
+                    choiceValidation = 0
                 if choice_0 == "1":
                     choice_1 = pyautogui.prompt(text="Luckily I'm on ground level, I just have to find a way to open the window. [1]Smash through [2]Pick the lock", title="Hijlmarch I: The Queen Of Validor", default="")
                     if choice_1 == "1" or choice_1 == "2":
-                        k = 1
+                        choiceValidation = 1
                     if choice_1 <"1" or choice_1 > "3":
                         print("Invalid responce")
-                        k = 0
+                        choiceValidation = 0
                     if choice_1 == "1":
                         choice_2 = pyautogui.prompt(text='You smash through the window, causing such a noise that you alert the guards, what do you do? [1]Hide outside away from them [2]Act like it was a robbery', title='Hijlmarch I: The Queen Of Validor' , default='')
                         if choice_2 == "1" or choice_2 == "2":
-                            k = 1
+                            choiceValidation = 1
                         if choice_2 <"1" or choice_2 > "3":
                             print("Invalid responce")
-                            k = 0
+                            choiceValidation = 0
                         if choice_2 == "1":
                             pyautogui.alert(text="You successfully hide away from the guards but they know that you've escaped. 'Theres a small farm  village near by, I'll go there, at least i have my sword to protect me through this forest.'", title='Hijlmarch I: The Queen Of Validor' , button='Next')#LEFT OFF
                                                    
                         if choice_2 <"1" or choice_2 > "3":
                             print("Invalid responce")
-                            k = 0
+                            choiceValidation = 0
 
                         if choice_2 == "2":
                             pyautogui.alert(text="The guards unlock and open your door to find you on your bed scared.You say 'Someone smashed my window! They stole my jewlery! Help!' The guards take you to King Val to see what must happen about this.\n The King says 'For your own protection, princess, you must go to validor farms and live with a resedent there for a while until we find the theif. You get guided out the castle and are given a horse to ride and you keep your sword  for protection through the coming forest.' ", title='Hijlmarch I: The Queen Of Validor' , button='Next')
@@ -105,11 +104,11 @@ while run:
             
                 if choice_0 == "2":
                     pyautogui.alert(text="You attempt to open the door, but it's locked...", title="Hijlmarch I: The Queen Of Validor", button="Next")
-                    k = 0
+                    choiceValidation = 0
             
         choice_0 = pyautogui.prompt(text="", title="Hijlmarch I: The Queen Of Validor", default="")
             #ELDROLOD
         if EldrolodDLCActive == True:
             Choice_0 = pyautogui.prompt(text="", title='Hijlmarch I: The Queen Of Validor' , default='')
-            act = 0
+            runLoop = 0
         
