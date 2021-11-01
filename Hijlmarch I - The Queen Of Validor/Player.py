@@ -1,19 +1,29 @@
-class Player: 
+class Player:
 
-    def init(self, Health: int, Inventory: list, ):
-        self.Health = Health
-        self.Inventory = Inventory
-        self.EquippedItem
-        return self
+    """ This class contains everything required for the player to function. """
+
+    def __init__(self, health, inventory, equipped_item):
+        self.health = health
+        self.inventory = inventory
+        self.equipped_item = equipped_item
+
     
-    def AddItemToInventory(self, Item):
-        self.Inventory.append(Item)
+    def add_item_to_inventory(self, item):
+        """ Adds an item to the Player object inventory. """
+        self.inventory.append(item)
+
     
-    def EquipItem(self, Item):
-        self.EquippedItem = Item
+    def equip_item(self, item):
+        """ Equips an item for the player. """
+        self.equipped_item = item
+
     
-    def IncreaseHealth(self, AmountToAddToHealth: int):
-        self.Health += AmountToAddToHealth
+    def increase_health(self, amount_to_add_health):
+        """ Increases the health of the player. """
+        self.health += amount_to_add_health
     
-    def DecreaseHealth(self, AmountToSubtractFromHealth: int):
-        self.Health -= AmountToSubtractFromHealth
+    
+    def decrease_health(self, amount_to_sub_health):
+        """ Decrease the health of the player. """
+        self.health -= amount_to_sub_health
+
